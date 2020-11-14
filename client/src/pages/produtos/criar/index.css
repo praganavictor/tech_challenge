@@ -1,0 +1,13 @@
+form {
+  padding-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 1em;
+}
+
+form button span {
+  padding: 0.5em;
+}

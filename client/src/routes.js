@@ -13,9 +13,9 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={produtos} />
-        <Route exact path="/evento/:id" component={buscarproduto} />
-        <Route path="/eventos/criar" component={criarprodutos} />
-        <Route exact path="/evento/:id/editar" component={editarprotudo} />
+        <Route exact path="/produto/:id" component={buscarproduto} />
+        <Route path="/produtos/criar" component={criarprodutos} />
+        <Route exact path="/produto/:id/editar" component={editarprotudo} />
 
         <Route path="*" component={erro404} />
       </Switch>
