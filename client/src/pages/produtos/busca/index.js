@@ -24,7 +24,7 @@ export default function VisualizarProduto(props) {
     }
 
     buscaProduto();
-  }, []);
+  }, [props]);
 
   async function handleDelete(produto) {
     const response = await api.delete(`/produto/${produto}`);
@@ -34,18 +34,22 @@ export default function VisualizarProduto(props) {
   }
 
   return (
-    <Container maxWidth="md" align="center">
-      <Typography variant="h2" color="inherit">
+    <Container maxWidth="md">
+      <Button variant="outlined" color="primary" href="/">
+        Voltar
+      </Button>
+
+      <Typography variant="h2" color="inherit" align="center">
         Visualizar Produto
       </Typography>
-      <Card align="left">
+      <Card>
         <CardContent>
           <Typography>Nome do produto: {produto.nome}</Typography>
           <Typography>Preço: {produto.preco}</Typography>
           <Typography>Quantidade: {produto.quantidade}</Typography>
           <Typography>Codigo de barras: {produto.codigo}</Typography>
           <ButtonGroup color="primary" aria-label="outlined button group">
-            <Button href={`/editar`}>Edit</Button>
+            <Button href={`${produto._id}/editar`}>Edit</Button>
             <Button onClick={() => handleDelete(produto._id)}>Delete</Button>
           </ButtonGroup>
         </CardContent>

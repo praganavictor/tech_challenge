@@ -32,8 +32,12 @@ export default function CriarProduto() {
   }
 
   return (
-    <Container maxWidth="md" align="center">
-      <Typography variant="h2" color="inherit">
+    <Container maxWidth="md">
+      <Button variant="outlined" color="primary" href="/">
+        Voltar
+      </Button>
+
+      <Typography variant="h2" color="inherit" align="center">
         Criar produto
       </Typography>
       <Typography variant="h2" color="inherit">

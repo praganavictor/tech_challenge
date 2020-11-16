@@ -52,8 +52,12 @@ export default function EditarProduto(props) {
   }
 
   return (
-    <Container maxWidth="md" align="center">
-      <Typography variant="h2" color="inherit">
+    <Container maxWidth="md">
+      <Button variant="outlined" color="primary" href="/">
+        Voltar
+      </Button>
+
+      <Typography variant="h2" color="inherit" align="center">
         Editar produto
       </Typography>
       <Typography variant="h2" color="inherit">
